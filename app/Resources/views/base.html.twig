@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author"      content="Ruben Baraut Gamez (ruben.baraut.cat)">
+        <title>{% block title %}Baraut.cat{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('bundles/app/images/gt_favicon.png') }}">
+        <!-- Bootstrap -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- Icons -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="{{ asset('bundles/app/css/styles.css') }}">
+
+        <!--[if lt IE 9]> <script src="{{ asset('bundles/app/js/html5shiv.js') }}"></script> <![endif]-->
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('bundles/app/images/gt_favicon.png') }}" />
+    </head>
+    <body class="home">
+
+    <header id="header">
+        {% for flash_message in app.session.flashbag.get('success') %}
+            <div class="success message">
+                {{ flash_message }}
+            </div>
+        {% endfor %}
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="{{ asset('bundles/app/images/ruben4.jpg') }}" alt="">
+                <span class="title">Ruben Baraut Gamez</span>
+			    <span class="tagline">Software Enginner / Web Developer<br>
+            </h1>
+        </div>
+
+        <nav class="navbar navbar-default navbar-sticky">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav">
+                        <li class="{{ app.request.attributes.get('_route') == 'homepage'?'active':'' }}"><a href="{{ path('homepage') }}">Home</a></li>
+                        <li class="{{ app.request.attributes.get('_route') == 'blog_tecnologic'?'active':'' }}"><a href="{{ path('blog_tecnologic') }}">Blog tecnològic</a></li>
+                        <li class="{{ app.request.attributes.get('_route') == 'blog_culinari'?'active':'' }}"><a href="{{ path('blog_culinari') }}">Blog culinari</a></li>
+                        <li class="{{ app.request.attributes.get('_route') == 'contacte'?'active':'' }}"><a href="{{ path('contacte') }}">Contacte</a></li>
+                        {#<li><a href="{{ path('books') }}">Llibres</a></li>#}
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+
+        <div class="container">
+        {% block body %}{% endblock %}
+            {% if app.request.get('_route') != 'contacte' %}
+            <div class="row section topspace">
+                <div class="panel panel-cta"><div class="panel-body">
+                        <div class="col-lg-8">
+                            <p>Si desitges més informació posat en contacte amb mi , ara he anat a comprar però en quan torni de la peixateria et responc</p>
+                        </div>
+                        <div class="col-lg-4 text-right">
+                            <a href="{{ path('contacte') }}" class="button">Contacte</a>
+                        </div>
+                    </div></div>
+            </div> <!-- /section -->
+           {% endif  %}
+        </div>
+    </main>
+        {% block javascripts %}{% endblock %}
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Baraut.cat - 2015</h3>
+                    <div class="widget-body">
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Follow me</h3>
+                    <div class="widget-body">
+                        <p class="follow-me-icons">
+                            <a target="_blank" href="https://twitter.com/sitobcn82"><i class="fa fa-twitter fa-2"></i></a>
+                            <a target="_blank" href="https://github.com/sitobcn82"><i class="fa fa-github fa-2"></i></a>
+                            <a target="_blank" href="http://es.linkedin.com/in/rubenbaraut"><i class="fa fa-linkedin fa-2"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="{{ asset('bundles/app/js/template.js') }}"></script>
+    </body>
+</html>

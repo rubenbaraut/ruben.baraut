@@ -1,0 +1,31 @@
+fos_comment_comment_new_headline_first:       Sigues el primer en comentar
+fos_comment_comment_new_headline:             Deixa un comentari
+fos_comment_comment_new_submit:               Enviar comentari
+fos_comment_comment_new_cancel:               Cancelar
+
+fos_comment_comment_edit_submit:              Enviar el comentari
+fos_comment_comment_edit_cancel:              Cancelar
+
+fos_comment_comment_reply_reply_to:           Respondre a %name%
+fos_comment_comment_reply_cancel:             Cancelar
+
+fos_comment_comment_show_by:                  Per
+fos_comment_comment_show_voteup:              M'agrada
+fos_comment_comment_show_votedown:            No me m'agrada
+fos_comment_comment_show_reply:               Respondre
+
+fos_comment_comment_vote_score:               "Puntuación:"
+
+fos_comment_comment_tree_load_more:           Carregar més respostes
+
+Showing %num% comment|Showing %num% comments: Se muestra %num% comentario|Se muestran %num% comentarios
+
+fos_comment_thread_close:                     Cerrar hilo
+fos_comment_thread_open:                      Abrir hilo
+fos_comment_thread_comment_count:             %count% Comentari|%count% Comentaris
+fos_comment_comment_edit:                     Editar
+fos_comment_comment_delete:                   Borrar comentari
+fos_comment_comment_undelete:                 Deshacer borrado del comentario
+fos_comment_comment_deleted:                  "[Borrado]"
+
+fos_comment_rss_feed:                         Feed RSS

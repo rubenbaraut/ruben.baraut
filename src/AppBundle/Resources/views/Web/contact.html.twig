@@ -1,0 +1,54 @@
+{% extends('::base.html.twig') %}
+
+{% block body %}
+    <main id="main">
+
+        <div class="container" style="height: 500px;">
+
+            <div class="row topspace">
+                <div class="col-sm-8 col-sm-offset-2">
+                    {{ form_start(form,{'attr':{'class':'basic-grey'}}) }}
+                    {{ form_errors(form) }}
+
+                    <div class="">
+                        <label>
+                            {{ form_label(form.name) }}
+                            {{ form_errors(form.name) }}
+                            {{ form_widget(form.name) }}
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            {{ form_label(form.email) }}
+                            {{ form_errors(form.email) }}
+                            {{ form_widget(form.email) }}
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            {{ form_label(form.subject) }}
+                            {{ form_errors(form.subject) }}
+                            {{ form_widget(form.subject) }}
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            {{ form_label(form.message) }}
+                            {{ form_errors(form.message) }}
+                            {{ form_widget(form.message) }}
+                        </label>
+                    </div>
+
+                    <div>
+                        {{ form_widget(form._token) }}
+                        {{ form_widget(form.save,{'attr':{'class':'button'}}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock body %}

@@ -1,0 +1,36 @@
+{% extends('::base.html.twig') %}
+
+{% block body %}
+
+    <div class="row topspace">
+        <div class="col-sm-8 col-sm-offset-2">
+            {% for post in posts %}
+                <article class="post">
+                    <header class="entry-header">
+                        <div class="entry-meta">
+                            <span class="posted-on"><time class="entry-date published" date="{{ post.date | date('d-m-y') }}">{{ post.date | date('d-m-Y') }}</time></span>
+                        </div>
+                        <h1 class="entry-title"><a href="single.html" rel="bookmark">{{ post.title }}</a></h1>
+                    </header>
+                    <div class="entry-content">
+                        {% if post.image is not null %}
+                            <p><img alt="" src="{{ asset('bundles/app/images/'~post.image) }} "></p>
+                        {% endif %}
+                        {% if post.teaser is not null %}
+                            {{ post.teaser | raw }}
+                        {% endif %}
+                        {% if post.text is not null %}
+                            {{ post.text | raw }}
+                        {% endif %}
+                        {% if post.linkSingle %}
+                            <a href="{{ path('blog_view_page',{'post':post.id}) }}" class="more-link">Continuar llegint&#8230;</a>
+                        {% endif %}
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+
+    {{ knp_pagination_render(posts) }}
+
+{% endblock %}
