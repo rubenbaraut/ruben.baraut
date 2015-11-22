@@ -1,0 +1,51 @@
+{% extends('::base.html.twig') %}
+
+{% block body %}
+
+    <div class="row topspace">
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <article class="post">
+                <header class="entry-header">
+                    <div class="entry-meta">
+                        <span class="posted-on"><time class="entry-date published" date="{{ post.date | date('d-m-y') }}">{{ post.date | date('d-m-y') }}</time></span>
+                    </div>
+                    {% if post.linkSingle %}
+                        <h1 class="entry-title"><a href="{{ path('blog_view_page',{'post':post.id}) }}" rel="bookmark">{{ post.title }}</a></h1>
+                    {% else %}
+                        <h1 class="entry-title">{{ post.title }}</h1>
+                    {% endif %}
+
+                </header>
+                <div class="entry-content">
+                    {% if post.image is not null %}
+                        <p><img alt="" src="{{ asset('bundles/app/images/'~post.image) }} "></p>
+                    {% endif %}
+                    {% if post.teaser is not null %}
+                        {{ post.teaser | raw }}
+                    {% endif %}
+                    {% if post.text is not null %}
+                        {{ post.text | raw }}
+                    {% endif %}
+                </div>
+            </article><!-- #post-## -->
+
+        </div>
+    </div> <!-- /row post  -->
+
+
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <div id="comments">
+                {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': post.id} %}
+                 <div class="clearfix"></div>
+            </div>
+        </div>
+    </div> <!-- /row comments -->
+    <div class="clearfix"></div>
+
+
+{% endblock %}
+

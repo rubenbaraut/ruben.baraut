@@ -1,0 +1,34 @@
+<div class="row section recentworks topspace">
+
+    <h2 class="section-title"><span>Feines i col·laboracions recents</span></h2>
+    <br />
+    <br />
+    <div class="thumbnails recentworks row">
+        {% for recentWork in recentWorks %}
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <a class="thumbnail" target="_blank" href="{{ recentWork.url }}">
+						<span class="img">
+							<img src="{{ asset('bundles/app/images/'~recentWork.image) }}" alt="">
+							<span class="cover"><span class="more">Visitar Web &rarr;</span></span>
+						</span>
+                    <span class="title">{{ recentWork.title }} <span>
+                </a>
+                <span class="details">
+                {% for tag in recentWork.tags %}
+                    {% if tag.collaboration %}
+                        <span style="color:red"> * </span>{{ tag.name }}
+                    {% else %}
+                        {{ tag.name }}
+                    {% endif %}
+                    {% if not loop.last %}
+                        |
+                    {% endif %}
+                {% endfor %}
+                </span>
+                <h4></h4>
+                <p></p>
+            </div>
+        {% endfor %}
+    </div>
+
+</div> <!-- /section -->
