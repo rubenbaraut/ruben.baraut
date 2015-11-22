@@ -10,7 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use AppBundle\Entity\Post;
 
-class WebController extends Controller
+class webController extends Controller
 {
     /**
      * @Route("/", name="homepage")
