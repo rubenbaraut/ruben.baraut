@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="369cdf7f-8c2e-4a3b-b9c3-5cc7ad1d00ee" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/styles.css" afterPath="$PROJECT_DIR$/web/css/styles.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/2345.jpg" afterPath="$PROJECT_DIR$/web/images/2345.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/avatar_man.png" afterPath="$PROJECT_DIR$/web/images/avatar_man.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/avatar_woman.png" afterPath="$PROJECT_DIR$/web/images/avatar_woman.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/bg_head.jpg" afterPath="$PROJECT_DIR$/web/images/bg_head.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/bg_head2.jpg" afterPath="$PROJECT_DIR$/web/images/bg_head2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/challenge.jpg" afterPath="$PROJECT_DIR$/web/images/challenge.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/dichaea.jpg" afterPath="$PROJECT_DIR$/web/images/dichaea.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/fesadent.jpg" afterPath="$PROJECT_DIR$/web/images/fesadent.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/fito.jpg" afterPath="$PROJECT_DIR$/web/images/fito.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/genoxage.jpg" afterPath="$PROJECT_DIR$/web/images/genoxage.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/gt_favicon.png" afterPath="$PROJECT_DIR$/web/images/gt_favicon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/guy.jpg" afterPath="$PROJECT_DIR$/web/images/guy.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/lakeka.jpg" afterPath="$PROJECT_DIR$/web/images/lakeka.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/mac.jpg" afterPath="$PROJECT_DIR$/web/images/mac.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/nexe.jpg" afterPath="$PROJECT_DIR$/web/images/nexe.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/ruben4.jpg" afterPath="$PROJECT_DIR$/web/images/ruben4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/s1.jpg" afterPath="$PROJECT_DIR$/web/images/s1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/s2.jpg" afterPath="$PROJECT_DIR$/web/images/s2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/sample_clients.png" afterPath="$PROJECT_DIR$/web/images/sample_clients.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/tomaquets.jpg" afterPath="$PROJECT_DIR$/web/images/tomaquets.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/wavecontrol_web.jpg" afterPath="$PROJECT_DIR$/web/images/wavecontrol_web.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/html5shiv.js" afterPath="$PROJECT_DIR$/web/js/html5shiv.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/template.js" afterPath="$PROJECT_DIR$/web/js/template.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/less/3rd-party/bootstrap/mixins.less" afterPath="$PROJECT_DIR$/web/less/3rd-party/bootstrap/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/less/3rd-party/lesshat.less" afterPath="$PROJECT_DIR$/web/less/3rd-party/lesshat.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/less/mixins.less" afterPath="$PROJECT_DIR$/web/less/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/less/navbar.less" afterPath="$PROJECT_DIR$/web/less/navbar.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/less/styles.less" afterPath="$PROJECT_DIR$/web/less/styles.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/web/blogPage.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/web/blogPage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/web/blogViewPage.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/web/blogViewPage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/web/recentWorks.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/web/recentWorks.html.twig" />
     </list>
     <ignored path="ruben.baraut.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -120,8 +87,8 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5405405">
-              <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.8432056">
+              <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -976,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5405405">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.8432056">
+          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
           <folding />
         </state>
       </provider>
