@@ -19,7 +19,7 @@
                 </header>
                 <div class="entry-content">
                     {% if post.image is not null %}
-                        <p><img alt="" src="{{ asset('bundles/app/images/'~post.image) }} "></p>
+                        <p><img alt="" src="{{ asset('images/'~post.image) }} "></p>
                     {% endif %}
                     {% if post.teaser is not null %}
                         {{ post.teaser | raw }}
