@@ -141,11 +141,11 @@ class LoadUserData implements FixtureInterface
 
         $post1 = new Post();
         $post1->setTitle("Primera a la frente, Symfony2 - Nginx i Error 404 a tots els assets");
-        $post1->setTeaser("<p>Després de varis intents intentant pujar a produccció aquesta web, avui que m'he decidit a pujar-la.</p>
-        <p>Després de fer el deploy de la aplicació i de configurar el apache em trobava amb el problema de que cap dels assets de la web es mostraven.</p>
-        <p>Primer de tot he pensat que per despistat m'havia deixat alguna de les coses bàsiques i les he tornat a fer : <ul><li>php app/console cache:clear --no-warmup --env=prod</li>php app/console assets:install<li><li>php app/console assetic:dump</li></ul>
-        I res, la web seguia funcionant però cap dels assets es veien. A continució he pensat que seria la configuració del apache i dels virtualhosts, però la configuració estava ben feta.</p><p>Finalment mirant els logs d'error del apache he trobat que s'estava Nginx Proxy per sobre del apache, i que estava capturant tots els fitxers estàtics de un directori que no era el documentRoot del symfony. </p>
-        <p>En resum, si Nginx està funcionant al vostre servidor, apart de configurar el apache per a treballar amb symfony, assegureu-vos que el fitxer de configuració del Nginx conté la mateixa configuració</p>" );
+        $post1->setTeaser("<p>Després de varis intents d'intentar pujar a produccció aquesta web, avui m'he decidit a pujar-la.</p>
+        <p>Després de fer el deploy de la aplicació i de configurar el apache em trobava amb el problema de que cap dels assets de la web es mostraven, tots retornaven error 404 perquè estaven tots sense el prefixe /web.</p>
+        <p>Primer de tot he pensat que per despistat m'havia deixat alguna de les coses bàsiques i les he tornat a fer : <ul><li>php app/console assets:install<li><li>php app/console assetic:dump</li><li>php app/console cache:clear --no-warmup --env=prod</li></ul>
+        I res, la web seguia funcionant però cap dels assets es veien correctament. A continució he pensat que seria la configuració del apache i dels virtualhosts, però la configuració estava ben feta. (gràcies a <a href=\"http://symfony.es/documentacion/como-configurar-bien-apache-para-las-aplicaciones-symfony2\">aquesta guia de Symfony.es</a> </p><p>Finalment mirant els logs d'error del apache he trobat que s'estava executant Nginx Proxy per sobre del apache, i que estava capturant tots els fitxers estàtics d'un directori que no era el documentRoot del symfony (és a dir sense el /web) </p>
+        <p>En resum, si Nginx està funcionant al vostre servidor, apart de configurar el apache per a treballar amb symfony, assegureu-vos que el fitxer de configuració del Nginx conté la mateixa configuració en quan directoris</p>" );
         $post1->setText(null);
         $post1->setDate(new \Datetime('26-11-2015'));
         $post1->setType(POST::TYPE_TECNOLOGIC);
