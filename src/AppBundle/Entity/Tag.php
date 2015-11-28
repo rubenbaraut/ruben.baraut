@@ -103,9 +103,13 @@ class Tag
     }
 
 
-
-
-
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+      return (string) $this->name;
+    }
 
 
 }

@@ -1,0 +1,97 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * AppBundle\Entity\Student
+ *
+ * @ORM\Table(name="student_course")
+ * @ORM\Entity
+ *
+ */
+class StudentCourse
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+    * @ORM\ManyToOne(targetEntity="Course", inversedBy="courseInverse")
+    * @ORM\JoinColumn(name="course", referencedColumnName="id",
+    * nullable=false, onDelete="CASCADE")
+    */
+    protected $courseMap;
+
+    /**
+    * @ORM\ManyToOne(targetEntity="Student", inversedBy="studentInverse")
+    * @ORM\JoinColumn(name="student", referencedColumnName="id",
+    * nullable=false, onDelete="CASCADE")
+    */
+    protected $studentMap;
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set courseMap
+     *
+     * @param \AppBundle\Entity\Course $courseMap
+     *
+     * @return StudentCourse
+     */
+    public function setCourseMap(\AppBundle\Entity\Course $courseMap)
+    {
+        $this->courseMap = $courseMap;
+
+        return $this;
+    }
+
+    /**
+     * Get courseMap
+     *
+     * @return \AppBundle\Entity\Course
+     */
+    public function getCourseMap()
+    {
+        return $this->courseMap;
+    }
+
+    /**
+     * Set studentMap
+     *
+     * @param \AppBundle\Entity\Student $studentMap
+     *
+     * @return StudentCourse
+     */
+    public function setStudentMap(\AppBundle\Entity\Student $studentMap)
+    {
+        $this->studentMap = $studentMap;
+
+        return $this;
+    }
+
+    /**
+     * Get studentMap
+     *
+     * @return \AppBundle\Entity\Student
+     */
+    public function getStudentMap()
+    {
+        return $this->studentMap;
+    }
+}
