@@ -97,3 +97,17 @@ knp_paginator:
     template:
         pagination: AppBundle:Web:paginator.html.twig # plantilla utilizada en la paginación
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # plantilla utilizada en la paginación para ordenar los resultados
+
+fos_user:
+    db_driver: orm
+    user_class: AppBundle\Entity\User
+    firewall_name: main
+
+easy_admin:
+    site_name: 'Ruben Baraut Admin'
+    entities:
+        - AppBundle\Entity\Post
+        - AppBundle\Entity\Comment
+        - AppBundle\Entity\Tag
+        - AppBundle\Entity\Thread
+        - AppBundle\Entity\Work

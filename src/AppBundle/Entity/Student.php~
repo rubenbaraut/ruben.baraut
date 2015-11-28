@@ -1,0 +1,90 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
+/**
+ * AppBundle\Entity\Student
+ *
+ * @ORM\Table(name="student")
+ * @ORM\Entity
+ *
+ */
+class Student
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var string $nombre
+     * @ORM\Column(name="nombre", type="string",  length=150, nullable=false)
+     */
+    private $nombre;
+
+
+    /**
+    * @ORM\OneToMany(targetEntity="StudentCourse", mappedBy="studentMap",
+    * cascade={"persist", "remove"})
+    */
+    protected $studentInverse;
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->studentInverse = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Add studentInverse
+     *
+     * @param \AppBundle\Entity\StudentCourse $studentInverse
+     *
+     * @return Student
+     */
+    public function addStudentInverse(\AppBundle\Entity\StudentCourse $studentInverse)
+    {
+        $this->studentInverse[] = $studentInverse;
+
+        return $this;
+    }
+
+    /**
+     * Remove studentInverse
+     *
+     * @param \AppBundle\Entity\StudentCourse $studentInverse
+     */
+    public function removeStudentInverse(\AppBundle\Entity\StudentCourse $studentInverse)
+    {
+        $this->studentInverse->removeElement($studentInverse);
+    }
+
+    /**
+     * Get studentInverse
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getStudentInverse()
+    {
+        return $this->studentInverse;
+    }
+}
